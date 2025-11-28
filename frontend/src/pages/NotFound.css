@@ -1,0 +1,76 @@
+/* Root dark mode setup */
+:root {
+  --bg-color: #0d0d0d;
+  --card-bg: #111111;
+  --text-color: #e5e5e5;
+  --accent-color: #6a5acd;
+  --accent-hover: #7b68ee;
+  --muted: #888888;
+  --radius: 18px;
+  --shadow: 0 0 25px rgba(106, 90, 205, 0.25);
+}
+
+body {
+  background: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Page container */
+.notfound-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  background: var(--bg-color);
+  text-align: center;
+  color: var(--text-color);
+  padding: 0 1rem;
+}
+
+/* Card */
+.notfound-card {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 450px;
+  width: 90%;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Heading */
+.notfound-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 0.8rem;
+}
+
+/* Description */
+.notfound-text {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.8rem;
+}
+
+/* Button */
+.notfound-btn {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s ease;
+  display: inline-block;
+}
+
+.notfound-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
