@@ -1,0 +1,146 @@
+/* ===============================
+   Home Page - Dark Modern Theme
+   =============================== */
+
+body {
+  background: #0d0d0d;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* ---------- Main Container ---------- */
+.home-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ---------- Page Heading ---------- */
+.home-wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #e0e0ff;
+}
+
+.home-wrapper h2 {
+  color: #b5b5ff;
+  margin-bottom: 16px;
+}
+
+/* ---------- Form Box ---------- */
+.note-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.note-form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #dfe0ff;
+}
+
+/* ---------- Inputs ---------- */
+.note-form input[type="text"],
+.note-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.note-form input[type="text"]:focus,
+.note-form textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+
+.note-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* ---------- Submit Button ---------- */
+.note-form input[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(135deg, #6c63ff, #4f46ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.note-form input[type="submit"]:hover {
+  background: linear-gradient(135deg, #7b73ff, #5b53ff);
+  transform: translateY(-2px);
+}
+
+/* ---------- Notes List ---------- */
+.notes-section {
+  margin-top: 40px;
+}
+
+.note-item {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.25s ease;
+}
+
+.note-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.note-item h3 {
+  margin: 0 0 8px;
+  color: #e0e0ff;
+}
+
+.note-item p {
+  margin: 0 0 12px;
+  color: #cccccc;
+}
+
+/* ---------- Delete Button ---------- */
+.delete-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #ff2a2a;
+  transform: translateY(-2px);
+}
+
+.delete-btn:active {
+  transform: translateY(1px);
+}
