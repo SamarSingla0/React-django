@@ -134,7 +134,7 @@ USE_I18N = True
 USE_TZ = True
 
 CORS_ALLOWED_ORIGINS = [
-   "https://your-frontend.vercel.app",
+   "https://noteapp-tan-chi.vercel.app",
 ]
 
 # Static files (CSS, JavaScript, Images)
