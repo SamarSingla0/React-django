@@ -1,0 +1,28 @@
+/* ============================
+   Loading Indicator - Dark Mode
+   ============================ */
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* ----- Spinner ----- */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #6c63ff; /* Accent color (purple-blue) */
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.6));
+}
+
+/* ----- Spin Animation ----- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

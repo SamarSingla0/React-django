@@ -1,6 +1,7 @@
 import api from "../api.js";
 import { useEffect, useState } from "react";
 import "../styles/Home.css";
+import Note from "../components/Note.jsx";
 
 function Home() {
   const [notes, setNotes] = useState([]);
@@ -32,11 +33,17 @@ function Home() {
 
   const createNote = (e) => {
     e.preventDefault();
+
     api
       .post("/api/notes/", { content, title })
       .then((res) => {
         if (res.status === 201) alert("Note created successfully");
         else alert("Failed to create note");
+
+        // CLEAR INPUTS
+        setTitle("");
+        setContent("");
+
         getNotes();
       })
       .catch((err) => alert(err));
@@ -45,10 +52,11 @@ function Home() {
   return (
     <div className="home-wrapper">
 
-      <div>
-        <h1>Home Page</h1>
-        <h2>Notes</h2>
-      </div>
+      <h1>Home Page</h1>
+      <h2>Notes</h2>
+
+      {/* Render Notes (ONLY ONCE) */}
+      
 
       <h2>Create a Note</h2>
 
@@ -57,7 +65,6 @@ function Home() {
         <input
           type="text"
           id="title"
-          name="title"
           required
           onChange={(e) => setTitle(e.target.value)}
           value={title}
@@ -66,7 +73,6 @@ function Home() {
         <label htmlFor="content">Content:</label>
         <textarea
           id="content"
-          name="content"
           required
           onChange={(e) => setContent(e.target.value)}
           value={content}
@@ -75,20 +81,10 @@ function Home() {
         <input type="submit" value="Submit" />
       </form>
 
-      <div className="notes-section">
-        {notes.map((note) => (
-          <div className="note-item" key={note.id}>
-            <h3>{note.title}</h3>
-            <p>{note.content}</p>
-            <button
-              className="delete-btn"
-              onClick={() => deleteNote(note.id)}
-            >
-              Delete
-            </button>
-          </div>
-        ))}
-      </div>
+
+      {notes.map((note) => (
+        <Note note={note} onDelete={deleteNote} key={note.id} />
+      ))}
 
     </div>
   );
